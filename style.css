@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/* public */
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+a{ text-decoration: none; }
+
+/* calendar */
+#calendar {
+    width: 400px;
+    margin: 50px auto 0;
+}
+.chooseDate {
+    position: relative;
+    width: 210px;
+    cursor: pointer;
+}
+.chooseDate>input {
+    width: 170px;
+    height: 30px;
+    font-size: 16px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    padding-left: 35px;
+    cursor: pointer;
+}
+.chooseDate .icon-rili {
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #999;
+    cursor: pointer;
+}
+
+.calendar {
+    position: relative;
+    left: -197px;
+    top: 50px;
+    width: 630px;
+    height: 400px;
+    box-shadow: 10px 7px 20px 5px rgba(0,0,0,.25);
+}
+.calendar .c-show {
+    float: left;
+    width: 35%;
+    height: 100%;
+    background-color: #009688;
+}
+.calendar .c-show>a {
+    color: #fff;
+    display: block;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.calendar .c-show>a:hover {
+    color: #333;
+}
+.calendar .c-show a.year {
+    margin-top: 20px;
+    font-size: 20px;
+    opacity: .8;
+}
+.calendar .c-show a.week {
+    font-size: 30px;
+}
+.calendar .c-show a.day {
+    font-size: 40px;
+}
+.calendar .c-box {
+    float: right;
+    width: 65%;
+    height: 100%;
+}
+.calendar .c-box .c-year {
+    width: 90%;
+    height: 30px;
+    margin: 10px auto;
+}
+.calendar .c-box .c-year i {
+    display: inline-block;
+    line-height: 30px;
+    color: #999;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.calendar .c-box .c-year i:hover {
+    color: #009688;
+}
+.calendar .c-box .c-year .icon-zuo {
+    float: left;
+}
+.calendar .c-box .c-year .icon-gengduo {
+    float: right;
+}
+.calendar .c-box .c-year a.years {
+    display: inline-block;
+    margin-left: 35%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+table.date-box {
+    width: 100%;
+    margin: 0 auto;
+}
+table.date-box thead {
+    color: #999;
+}
+table.date-box tbody td {
+    font-size: 16px;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+table.date-box tbody td>a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+table.date-box tbody td>a:hover {
+    background-color: #009688;
+    color: #fff;
+}
+table.date-box tbody td>a.active {
+    background-color: #009688;
+    color: #fff;
+}
+.calendar .c-button {
+    position: absolute;
+    top: 360px;
+    left: 450px;
+}
+.calendar .c-button a {
+    margin-left: 35px;
+    color: #009688;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.calendar .c-button a:hover {
+    color: #333;
+}
