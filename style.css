@@ -19,13 +19,17 @@ a{ text-decoration: none; }
     cursor: pointer;
 }
 .chooseDate>input {
+    display: block;
     width: 170px;
     height: 30px;
     font-size: 16px;
-    border: 1px solid #666;
+    border: 1px solid #999;
     border-radius: 4px;
     padding-left: 35px;
     cursor: pointer;
+}
+.chooseDate>input:hover {
+    border-color: #333;
 }
 .chooseDate .icon-rili {
     position: absolute;
