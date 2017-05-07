@@ -113,6 +113,18 @@ table.date-box {
     width: 100%;
     margin: 0 auto;
 }
+table.animate {
+    animation: show-table .5s ease-out;
+}
+@keyframes show-table {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 table.date-box thead {
     color: #999;
 }
@@ -142,14 +154,14 @@ table.date-box tbody td>a.active {
 .calendar .c-button {
     position: absolute;
     top: 360px;
-    left: 450px;
+    left: 455px;
 }
 .calendar .c-button a {
     margin-left: 35px;
     color: #009688;
     font-size: 18px;
     font-weight: bold;
-    letter-spacing: 2px;
+    cursor: pointer;
 }
 .calendar .c-button a:hover {
     color: #333;
