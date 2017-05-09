@@ -216,18 +216,19 @@ class Calendar {
 
         //绘制date-box
         var table = this.creatElement('table');
+        table.className = 'date-box';
         var thead = this.creatElement('thead');
-        var tr = this.creatElement('tr');
+        var theadTr = this.creatElement('tr');
         var header = ['S','M','T','W','T','F','S'];
         header.forEach(function(val){
             var th = cthis.creatElement('th');
             th.innerHTML = val;
-            tr.appendChild(th);
+            theadTr.appendChild(th);
         })
 
         //拼接date-box
         table.appendChild(thead);
-        thead.appendChild(tr);
+        thead.appendChild(theadTr);
         table.className == 'animate' ? '' : 'animate';
 
         //得到每月第一天周几
@@ -235,13 +236,36 @@ class Calendar {
         var firstDay = new Date(date.year + '/' + date.month + '/' + 1).getDay();
 
         //计算出一个月中的每个周日
-        for(var i=1;i<=date.Alldays;i++){
-            if( i===1 || i + firstDay === 8 ){
-                var tr = this.creatElement('tr');         //每个周日另起一行
+        //i表示本月table第几天，date.Alldays+firstDay-1表示循环次数，需要加上table中空缺的前几天
+        for(var i = 0;i < date.Alldays + firstDay - 1;i++){
+            if( i === 0 || i % 7 === 0 ){            //table的第1、7、14、21、28天
+                var tbodyTr = this.creatElement('tr');
             }
             var td = this.creatElement('td');
-            
+            if( i >= firstDay ){                         //本月实际第一天及以后
+                var a = this.creatElement('a');
+                var currentDay = i - firstDay + 2;       //当前是本月几号
+                a.innerHTML = currentDay;
+                if(  date.day === currentDay){
+                    a.className = 'active';
+                }
+                td.appendChild(a);
+                a.addEventListener('click',function(){
+                    var weeks = ['Sun','Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat'];
+                    date.day = parseInt(this.innerHTML);
+                    var currentDate = new Date(date.year + '/' + date.month + '/' + date.day);
+                    date.week = weeks[currentDate.getDay()];
+                    cthis.initialCalendarBox(date,calendarBox,calendarShow);
+                    cthis.initialCalendarShow(date,calendarShow,calendarBox);
+                })
+            }
+            tbodyTr.appendChild(td)
+            if( i === 0 || i % 7 === 0 ){
+                tbody.appendChild(tbodyTr);
+            }
         }
+        table.appendChild(tbody);
+        calendarBox.appendChild(table);
     }
 
 }
