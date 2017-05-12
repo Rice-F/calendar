@@ -4,9 +4,9 @@ class Calendar {
 
     //初始化
     constructor(node){
-        this.calendarMain = node;       //传递实例
+        this.calendarMain = node;            //传递实例
         this.calendarFound = false;         //日历未创建
-        this.display = false;          //日历未显示
+        this.display = false;               //日历未显示
         this.date = new Date();
         this.calendarDate = {};
     }
@@ -34,11 +34,13 @@ class Calendar {
         this.queryElement('.chooseDate>input',true).addEventListener('click',function(){
             if( !this.calendarFound && !this.display ){                       //日历未创建未显示
                 cthis.create();                                                 //创建日历
+                this.calendarFound = true;
+                this.display = true;
             }else if(this.display){                                           //日历已创建已显示
-                this.hide( cthis.queryElement('.calendar',true) );            //隐藏日历
+                cthis.hide( cthis.queryElement('.calendar',true) );            //隐藏日历
                 this.display = false;                                         //修改初始值为未显示
             }else if(!this.display){                                          //日历已创建未显示
-                this.show( this.queryElement('.calendar',true) );             //显示日历
+                cthis.show( cthis.queryElement('.calendar',true) );             //显示日历
                 this.display = true;                                           //修改初始值为已显示
             }
         })
@@ -98,6 +100,107 @@ class Calendar {
         calendarShow.appendChild(showYear);
         calendarShow.appendChild(showWeek);
         calendarShow.appendChild(showDay);
+
+        //选年选月切换
+        showYear.addEventListener('click',function(){
+            cthis.hide(showWeek);
+            cthis.hide(showDay);
+            if( showYear.innerHTML !== 'Choose Month' ){
+                showYear.innerHTML = 'Choose Month';
+                if( cthis.queryElement('.monthList',true) ){
+                    cthis.hide( cthis.queryElement('.monthList',true) );
+                }
+                cthis.chooseYear(date,calendarShow,calendarBox);
+            }else{
+                showYear.innerHTML = 'Choose Year';
+                if( cthis.queryElement('.yearList',true) ){
+                    cthis.hide( cthis.queryElement('.yearList',true) );
+                }
+                cthis.chooseMonth(date,calendarShow,calendarBox);
+            }
+
+        })
+    }
+
+    //yearList
+    chooseYear(date,calendarShow,calendarBox){
+        var cthis = this;
+        if( !this.queryElement('.yearList',true) ){
+            var yearList = cthis.creatElement('div');
+            yearList.className = 'yearList';
+            for(var i = date.year - 1;i < date.year + 10;i++){
+                if( i === date.year - 1 ){
+                    var iconfontShang = cthis.creatElement('a');
+                    iconfontShang.className = 'iconfont';
+                    var iconShang = cthis.creatElement('i');
+                    iconShang.className = 'iconfont icon-shang';
+                    yearList.appendChild(iconfontShang);
+                    iconfontShang.appendChild(iconShang);
+                }else if( i === date.year + 9 ){
+                    var iconfontXia = cthis.creatElement('a');
+                    iconfontXia.className = 'iconfont';
+                    var iconXia = cthis.creatElement('i');
+                    iconXia.className = 'iconfont icon-xia';
+                    yearList.appendChild(iconfontXia);
+                    iconfontXia.appendChild(iconXia);
+                }else{
+                    var yearItem = cthis.creatElement('a');
+                    yearItem.className = 'year-item';
+                    yearItem.innerHTML = i;
+                    yearList.appendChild(yearItem);
+                    yearItem.addEventListener('click',function(){
+                        date.year = this.innerHTML;
+                        cthis.initialCalendarBox(date,calendarBox,calendarShow,'animate');
+                    })
+                }
+            }
+            calendarShow.appendChild(yearList);
+
+
+            //向下滚动
+            iconfontXia.addEventListener('click',function(){
+                var nextYearList = cthis.queryElement('.year-item');
+                for(var i = 0;i < nextYearList.length;i++){
+                    nextYearList[i].innerHTML = parseInt( nextYearList[i].innerHTML ) + 9;
+                }
+            })
+
+            //向上滚动
+            iconfontShang.addEventListener('click',function(){
+                var lastYearList = cthis.queryElement('.year-item');
+                for(var i = 0;i < lastYearList.length;i++){
+                    lastYearList[i].innerHTML = parseInt(lastYearList[i].innerHTML) - 9;
+                }
+            })
+
+        }else{
+            this.show( this.queryElement('.yearList',true) );
+        }
+    }
+    //monthList
+    chooseMonth(date,calendarShow,calendarBox){
+        var cthis = this;
+        if( !this.queryElement('.monthList',true) ){
+            var monthList = cthis.creatElement('div');
+            monthList.className = 'monthList';
+            var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+            for(var i = 0;i < months.length;i++){
+                var monthItem = cthis.creatElement('a');
+                monthItem.className = 'month-item';
+                monthItem.innerHTML = months[i];
+                monthList.appendChild(monthItem)
+            }
+            calendarShow.appendChild(monthList);
+        }else{
+            this.show( this.queryElement('.monthList',true) );
+        }
+        var monthItems = this.queryElement('.month-item');
+        for(var i = 0;i<monthItems.length;i++){
+            monthItems[i].addEventListener('click',function(){
+                date.month = this.innerHTML;
+                cthis.initialCalendarBox(date,calendarBox,calendarShow,'animate');
+            })
+        }
     }
 
     //初始化calendarBox
@@ -148,7 +251,7 @@ class Calendar {
             var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
             date.year = now.getFullYear();
             date.month = months[now.getMonth()];
-            date.day = now.getDay();
+            date.day = now.getDate();
             date.week = weeks[now.getDay()];
             date.Alldays = cthis.days(date.year,date.month);
             cthis.initialCalendarBox(date,calendarBox,calendarShow,'animate');
@@ -158,8 +261,45 @@ class Calendar {
         //ok绑定点击事件
         deterMine.addEventListener('click',function(){
             cthis.hide( cthis.queryElement('.calendar',true) );
-            cthis.dis = false;
+            this.display = false;
             cthis.queryElement('.chooseDate>input',true).value = date.day + ' ' + date.month + ' ' + date.year;
+            cthis.initialCalendarShow(date,calendarShow,calendarBox);
+        })
+
+        //向左滚动
+        this.queryElement('.icon-zuo',true).addEventListener('click',function(){
+            var weeks = ['Sun','Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat'];
+            var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+            if( date.month !== 'Jan' ){
+                var currentIdx = months.indexOf(date.month);
+                date.month = months[currentIdx-1];
+                date.Alldays = cthis.days(date.year,date.month);
+            }else{
+                date.year -= 1;
+                date.month = months[11];
+            }
+            date.day = 1;
+            var currentDate = new Date(date.year + '/' + date.month + '/' + date.day);
+            date.week = weeks[currentDate.getDay()];
+            cthis.initialCalendarBox(date,calendarBox,calendarShow);
+            cthis.initialCalendarShow(date,calendarShow,calendarBox);
+        })
+
+        //向右滚动
+        this.queryElement('.icon-gengduo',true).addEventListener('click',function(){
+            var weeks = ['Sun','Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat'];
+            var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+            if( date.month !== 'Dec' ){
+                var currentIdx = months.indexOf(date.month);
+                date.month = months[currentIdx+1];
+                date.Alldays = cthis.days(date.year,date.month);
+            }else{
+                date.year += 1;
+                date.month = months[0];
+            }
+            var currentDate = new Date(date.year + '/' + date.month + '/' + date.day);
+            date.week = weeks[currentDate.getDay()];
+            cthis.initialCalendarBox(date,calendarBox,calendarShow);
             cthis.initialCalendarShow(date,calendarShow,calendarBox);
         })
     }
@@ -188,16 +328,16 @@ class Calendar {
     days(year,month){
         var days = 30;
         switch (month){
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
+            case 'Jan':
+            case 'Mar':
+            case 'May':
+            case 'Jul':
+            case 'Aug':
+            case 'Oct':
+            case 'Dec':
                 days = 31;
                 break;
-            case 2:
+            case 'Feb':
                 if( year % 4 === 0 && year % 100 !== 0 ){
                     days = 29;
                 }else if( year % 400 === 0 ){
@@ -237,14 +377,14 @@ class Calendar {
 
         //计算出一个月中的每个周日
         //i表示本月table第几天，date.Alldays+firstDay-1表示循环次数，需要加上table中空缺的前几天
-        for(var i = 0;i < date.Alldays + firstDay - 1;i++){
+        for(var i = 0;i < date.Alldays + firstDay;i++){
             if( i === 0 || i % 7 === 0 ){            //table的第1、7、14、21、28天
                 var tbodyTr = this.creatElement('tr');
             }
             var td = this.creatElement('td');
             if( i >= firstDay ){                         //本月实际第一天及以后
                 var a = this.creatElement('a');
-                var currentDay = i - firstDay + 2;       //当前是本月几号
+                var currentDay = i - firstDay + 1;       //当前是本月几号
                 a.innerHTML = currentDay;
                 if(  date.day === currentDay){
                     a.className = 'active';

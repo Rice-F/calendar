@@ -13,6 +13,8 @@ a{ text-decoration: none; }
     width: 400px;
     margin: 50px auto 0;
 }
+
+/* input */
 .chooseDate {
     position: relative;
     width: 210px;
@@ -41,6 +43,7 @@ a{ text-decoration: none; }
     cursor: pointer;
 }
 
+/* calendar */
 .calendar {
     position: relative;
     left: -197px;
@@ -60,6 +63,7 @@ a{ text-decoration: none; }
     display: block;
     margin-left: 20px;
     margin-top: 10px;
+    cursor: pointer;
 }
 .calendar .c-show>a:hover {
     color: #333;
@@ -75,6 +79,50 @@ a{ text-decoration: none; }
 .calendar .c-show a.day {
     font-size: 40px;
 }
+
+.chooseMonth,
+.chooseYear{
+    font-size: 20px;
+    opacity: .8;
+}
+.yearList {
+    margin-top: 8px;
+}
+.yearList>a.iconfont,
+.yearList>a.year-item {
+    display: inline-block;
+    width: 100%;
+    height: 22px;
+    padding: 5px 0;
+    font-size: 20px;
+    color: #fff;
+    opacity: .8;
+    text-align: center;
+    cursor: pointer;
+}
+.yearList>a:hover{
+    color: #333;
+}
+
+.monthList {
+    margin-top: 15px;
+    padding-left: 28px;
+}
+.monthList a.month-item {
+    display: inline-block;
+    width: 40%;
+    height: 40px;
+    padding: 10px 0 5px;
+    font-size: 20px;
+    color: #fff;
+    opacity: .8;
+    text-align: center;
+    cursor: pointer;
+}
+.monthList>a:hover {
+    color: #333;
+}
+
 .calendar .c-box {
     float: right;
     width: 65%;
@@ -151,6 +199,8 @@ table.date-box tbody td>a.active {
     background-color: #009688;
     color: #fff;
 }
+
+/* c-button */
 .calendar .c-button {
     position: absolute;
     top: 360px;
