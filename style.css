@@ -94,13 +94,13 @@ a{ text-decoration: none; }
     margin-top: 10px;
     cursor: pointer;
 }
-.calendar .c-show>a:hover {
-    color: #333;
-}
 .calendar .c-show a.year {
     margin-top: 20px;
     font-size: 20px;
     opacity: .8;
+}
+.calendar .c-show>a.year:hover {
+    color: #333;
 }
 .calendar .c-show a.week {
     font-size: 30px;
