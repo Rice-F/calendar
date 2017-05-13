@@ -32,16 +32,16 @@ class Calendar {
 
         //input绑定点击事件
         this.queryElement('.chooseDate>input',true).addEventListener('click',function(){
-            if( !this.calendarFound && !this.display ){                       //日历未创建未显示
+            if( !cthis.calendarFound && !cthis.display ){                       //日历未创建未显示
                 cthis.create();                                                 //创建日历
-                this.calendarFound = true;
-                this.display = true;
-            }else if(this.display){                                           //日历已创建已显示
+               cthis.calendarFound = true;
+                cthis.display = true;
+            }else if(cthis.display){                                           //日历已创建已显示
                 cthis.hide( cthis.queryElement('.calendar',true) );            //隐藏日历
-                this.display = false;                                         //修改初始值为未显示
-            }else if(!this.display){                                          //日历已创建未显示
+                cthis.display = false;                                         //修改初始值为未显示
+            }else if(!cthis.display){                                          //日历已创建未显示
                 cthis.show( cthis.queryElement('.calendar',true) );             //显示日历
-                this.display = true;                                           //修改初始值为已显示
+                cthis.display = true;                                           //修改初始值为已显示
             }
         })
     }
@@ -125,6 +125,7 @@ class Calendar {
     //yearList
     chooseYear(date,calendarShow,calendarBox){
         var cthis = this;
+        date.year = parseInt(date.year);
         if( !this.queryElement('.yearList',true) ){
             var yearList = cthis.creatElement('div');
             yearList.className = 'yearList';
@@ -261,7 +262,7 @@ class Calendar {
         //ok绑定点击事件
         deterMine.addEventListener('click',function(){
             cthis.hide( cthis.queryElement('.calendar',true) );
-            this.display = false;
+            cthis.display = false;
             cthis.queryElement('.chooseDate>input',true).value = date.day + ' ' + date.month + ' ' + date.year;
             cthis.initialCalendarShow(date,calendarShow,calendarBox);
         })
@@ -389,7 +390,6 @@ class Calendar {
                 if(  date.day === currentDay){
                     a.className = 'active';
                 }
-                td.appendChild(a);
                 a.addEventListener('click',function(){
                     var weeks = ['Sun','Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat'];
                     date.day = parseInt(this.innerHTML);
@@ -398,6 +398,7 @@ class Calendar {
                     cthis.initialCalendarBox(date,calendarBox,calendarShow);
                     cthis.initialCalendarShow(date,calendarShow,calendarBox);
                 })
+                td.appendChild(a);
             }
             tbodyTr.appendChild(td)
             if( i === 0 || i % 7 === 0 ){

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b11eb27d-2da0-429e-887f-dddf6eb0de72" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
@@ -26,30 +25,9 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="42" column="56" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="56" />
+            <state relative-caret-position="22">
+              <caret line="42" column="56" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="56" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="263" column="12" lean-forward="false" selection-start-line="263" selection-start-column="12" selection-end-line="263" selection-end-column="12" />
-              <folding>
-                <element signature="n#!!block;n#create#0;n#Calendar#0" expanded="false" />
-                <element signature="n#!!block;n#initialCalendarShow#0;n#Calendar#0" expanded="false" />
-                <element signature="n#!!block;n#chooseYear#0;n#Calendar#0" expanded="false" />
-                <element signature="n#!!block;n#chooseMonth#0;n#Calendar#0" expanded="false" />
-                <element signature="n#!!block;n#creatElement#0;n#Calendar#0" expanded="false" />
-                <element signature="n#!!block;n#queryElement#0;n#Calendar#0" expanded="false" />
-                <element signature="n#!!block;n#hide#0;n#Calendar#0" expanded="false" />
-                <element signature="n#!!block;n#show#0;n#Calendar#0" expanded="false" />
-                <element signature="n#!!block;n#days#0;n#Calendar#0" expanded="false" />
-                <element signature="n#!!block;n#dateTable#0;n#Calendar#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -57,9 +35,41 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="119" column="19" lean-forward="false" selection-start-line="119" selection-start-column="19" selection-end-line="119" selection-end-column="19" />
+            <state relative-caret-position="490">
+              <caret line="159" column="1" lean-forward="false" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calendarDate.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../wheel/wheelList/calendarDate/calendarDate.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="240" column="11" lean-forward="false" selection-start-line="240" selection-start-column="2" selection-end-line="240" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="127" column="40" lean-forward="false" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="40" />
+              <folding>
+                <element signature="n#!!block;n#start#0;n#Calendar#0" expanded="false" />
+                <element signature="n#!!block;n#create#0;n#Calendar#0" expanded="false" />
+                <element signature="n#!!block;n#initialCalendarShow#0;n#Calendar#0" expanded="false" />
+                <element signature="n#!!block;n#chooseMonth#0;n#Calendar#0" expanded="false" />
+                <element signature="n#!!block;n#initialCalendarBox#0;n#Calendar#0" expanded="false" />
+                <element signature="n#!!block;n#creatElement#0;n#Calendar#0" expanded="false" />
+                <element signature="n#!!block;n#queryElement#0;n#Calendar#0" expanded="false" />
+                <element signature="n#!!block;n#hide#0;n#Calendar#0" expanded="false" />
+                <element signature="n#!!block;n#show#0;n#Calendar#0" expanded="false" />
+                <element signature="n#!!block;n#days#0;n#Calendar#0" expanded="false" />
+                <element signature="n#!!block;n#dateTable#0;n#Calendar#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,6 +83,7 @@
       <find>date.day</find>
       <find>tbody</find>
       <find>days</find>
+      <find>animation</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -83,8 +94,9 @@
       <list>
         <option value="$PROJECT_DIR$/../test.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/../wheel/wheelList/calendarDate/calendarDate.css" />
       </list>
     </option>
   </component>
@@ -116,7 +128,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -131,6 +142,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -156,12 +168,13 @@
       <workItem from="1493968157231" duration="12882000" />
       <workItem from="1494228732619" duration="10180000" />
       <workItem from="1494420451958" duration="14736000" />
-      <workItem from="1494557921865" duration="6406000" />
+      <workItem from="1494557921865" duration="7684000" />
+      <workItem from="1494679226890" duration="5462000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67054000" />
+    <option name="totallyTimeSpent" value="73794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="869" y="95" width="1010" height="838" extended-state="0" />
@@ -193,11 +206,47 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="42" column="56" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5786">
+          <caret line="263" column="12" lean-forward="false" selection-start-line="263" selection-start-column="12" selection-end-line="263" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!block;n#start#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#create#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#initialCalendarShow#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#chooseMonth#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#initialCalendarBox#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#creatElement#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#queryElement#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#hide#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#show#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#days#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#dateTable#0;n#Calendar#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -211,10 +260,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#!!block;n#start#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#create#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#initialCalendarShow#0;n#Calendar#0" expanded="false" />
-            <element signature="n#!!block;n#chooseYear#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#chooseMonth#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#initialCalendarBox#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#creatElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#queryElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#hide#0;n#Calendar#0" expanded="false" />
@@ -254,10 +304,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#!!block;n#start#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#create#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#initialCalendarShow#0;n#Calendar#0" expanded="false" />
-            <element signature="n#!!block;n#chooseYear#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#chooseMonth#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#initialCalendarBox#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#creatElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#queryElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#hide#0;n#Calendar#0" expanded="false" />
@@ -289,10 +340,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#!!block;n#start#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#create#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#initialCalendarShow#0;n#Calendar#0" expanded="false" />
-            <element signature="n#!!block;n#chooseYear#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#chooseMonth#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#initialCalendarBox#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#creatElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#queryElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#hide#0;n#Calendar#0" expanded="false" />
@@ -324,10 +376,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#!!block;n#start#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#create#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#initialCalendarShow#0;n#Calendar#0" expanded="false" />
-            <element signature="n#!!block;n#chooseYear#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#chooseMonth#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#initialCalendarBox#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#creatElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#queryElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#hide#0;n#Calendar#0" expanded="false" />
@@ -359,10 +412,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#!!block;n#start#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#create#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#initialCalendarShow#0;n#Calendar#0" expanded="false" />
-            <element signature="n#!!block;n#chooseYear#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#chooseMonth#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#initialCalendarBox#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#creatElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#queryElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#hide#0;n#Calendar#0" expanded="false" />
@@ -382,29 +436,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="42" column="56" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="119" column="19" lean-forward="false" selection-start-line="119" selection-start-column="19" selection-end-line="119" selection-end-column="19" />
+        <state relative-caret-position="22">
+          <caret line="42" column="56" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="263" column="12" lean-forward="false" selection-start-line="263" selection-start-column="12" selection-end-line="263" selection-end-column="12" />
+        <state relative-caret-position="293">
+          <caret line="127" column="40" lean-forward="false" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="40" />
           <folding>
+            <element signature="n#!!block;n#start#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#create#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#initialCalendarShow#0;n#Calendar#0" expanded="false" />
-            <element signature="n#!!block;n#chooseYear#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#chooseMonth#0;n#Calendar#0" expanded="false" />
+            <element signature="n#!!block;n#initialCalendarBox#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#creatElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#queryElement#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#hide#0;n#Calendar#0" expanded="false" />
@@ -412,6 +459,22 @@
             <element signature="n#!!block;n#days#0;n#Calendar#0" expanded="false" />
             <element signature="n#!!block;n#dateTable#0;n#Calendar#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="159" column="1" lean-forward="false" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wheel/wheelList/calendarDate/calendarDate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="240" column="11" lean-forward="false" selection-start-line="240" selection-start-column="2" selection-end-line="240" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>

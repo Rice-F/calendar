@@ -51,6 +51,35 @@ a{ text-decoration: none; }
     width: 630px;
     height: 400px;
     box-shadow: 10px 7px 20px 5px rgba(0,0,0,.25);
+    animation: show 0.5s ease-out 1;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.5 ease-out;
+}
+@keyframes show {
+    0% {
+        top: -50px;
+        opacity: 0;
+        /*transform: rotate(3deg);*/
+    }
+    25% {
+        top: -25px;
+        opacity: 0.25;
+        /*transform: rotate(-3deg);*/
+    }
+    50% {
+        top: 0px;
+        opacity: 0.5;
+        /*transform: rotate(3deg);*/
+    }
+    75% {
+        top: 25px;
+        opacity: 0.75;
+        /*transform: rotate(-3deg);*/
+    }
+    100% {
+        top: 50px;
+        opacity: 1;
+    }
 }
 .calendar .c-show {
     float: left;
@@ -86,7 +115,18 @@ a{ text-decoration: none; }
     opacity: .8;
 }
 .yearList {
-    margin-top: 8px;
+    animation: show-year 0.5s ease-out;
+}
+@keyframes show-year {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        width: 100%;
+        height: auto;
+    }
 }
 .yearList>a.iconfont,
 .yearList>a.year-item {
@@ -107,6 +147,16 @@ a{ text-decoration: none; }
 .monthList {
     margin-top: 15px;
     padding-left: 28px;
+    animation: show-month 0.5s ease-out;
+}
+@keyframes show-month {
+    0% {
+        margin-left: -200px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
 }
 .monthList a.month-item {
     display: inline-block;
